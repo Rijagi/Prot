@@ -1,56 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Finder - Find Your Perfect Car</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mercedes — 1995 C‑Class</title>
+  <link rel="stylesheet" href="lightbox.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1 class="logo">🚗 Car Finder</h1>
-            
-            <!-- Brand & Model Dropdown in Top Right -->
-            <nav class="brand-menu">
-                <button class="menu-btn">Select Car Brand & Model ▼</button>
-                <div class="dropdown-content">
-                    <div class="brand-section">
-                        <h3>BMW</h3>
-                        <ul id="bmw-models"></ul>
-                    </div>
-                    <div class="brand-section">
-                        <h3>Mercedes-Benz</h3>
-                        <ul id="mercedes-models"></ul>
-                    </div>
-                    <div class="brand-section">
-                        <h3>Audi</h3>
-                        <ul id="audi-models"></ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
+  <main class="container">
+    <header style="text-align:center;margin:36px 0">
+      <h1>Mercedes — Gallery</h1>
+      <p>Click the car below to view the full photo without leaving the site.</p>
     </header>
 
-    <main>
-        <div class="search-container">
-            <h2>Find Your Car</h2>
-            <div class="search-box">
-                <input 
-                    type="text" 
-                    id="searchInput" 
-                    placeholder="Search for a car brand or model..." 
-                    class="search-input"
-                >
-                <button class="search-btn">Search</button>
-            </div>
-        </div>
+    <section class="grid" aria-label="Mercedes models">
+      <article class="card" tabindex="0" data-src="images/mercedes-1995-c-class.png" data-alt="1995 Mercedes-Benz C-Class W202 side view">
+        <img src="images/mercedes-1995-c-class-400.png" alt="1995 Mercedes-Benz C-Class — thumbnail" loading="lazy" width="400" height="267">
+        <h3>1995 Mercedes‑Benz C‑Class (W202)</h3>
+      </article>
+    </section>
+  </main>
 
-        <div class="results-container" id="resultsContainer">
-            <p class="no-results">Select a car or use the search bar to find cars</p>
-        </div>
-    </main>
+  <!-- Modal (hidden by default) -->
+  <div class="modal" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content" role="document">
+      <button class="close-btn" id="lbClose" aria-label="Close (Esc)">✕</button>
+      <img id="lbImage" src="" alt="">
+      <div class="caption">
+        <div id="lbTitle">1995 Mercedes‑Benz C‑Class (W202)</div>
+        <a id="lbDownload" href="#" download>Download</a>
+      </div>
+    </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="lightbox.js"></script>
 </body>
 </html>
