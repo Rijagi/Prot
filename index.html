@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Finder - Find Your Perfect Car</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">🚗 Car Finder</h1>
+            
+            <!-- Brand & Model Dropdown in Top Right -->
+            <nav class="brand-menu">
+                <button class="menu-btn">Select Car Brand & Model ▼</button>
+                <div class="dropdown-content">
+                    <div class="brand-section">
+                        <h3>BMW</h3>
+                        <ul id="bmw-models"></ul>
+                    </div>
+                    <div class="brand-section">
+                        <h3>Mercedes-Benz</h3>
+                        <ul id="mercedes-models"></ul>
+                    </div>
+                    <div class="brand-section">
+                        <h3>Audi</h3>
+                        <ul id="audi-models"></ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <h2>Find Your Car</h2>
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search for a car brand or model..." 
+                    class="search-input"
+                >
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+
+        <div class="results-container" id="resultsContainer">
+            <p class="no-results">Select a car or use the search bar to find cars</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
